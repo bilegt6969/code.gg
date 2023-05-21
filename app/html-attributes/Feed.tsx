@@ -52,7 +52,7 @@ function Feed() {
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
-   <p className='mt-4'>Өргөн болон өндрийн анхдагч утгыг цэгээр зааж өгсөн байдаг. height="400" гэдэг нь зургийн өргөн 400 pixels гэсэн үг юм.
+   <p className='mt-4'>Өргөн болон өндрийн анхдагч утгыг цэгээр зааж өгсөн байдаг. height=&quot;400&ldquo; гэдэг нь зургийн өргөн 400 pixels гэсэн үг юм.
 
 </p>
 
