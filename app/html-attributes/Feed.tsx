@@ -4,29 +4,27 @@ function Feed() {
   return (
     <div className="col-span-4">
       <section>
-      <h1 className="font-bold text-4xl mt-8">HTML Attributes</h1>
+        <h1 className="font-bold text-4xl mt-8">HTML Attributes</h1>
         <ul className="list-disc mt-4">
           <li>Бүх HTML элементүүд нь атрибуттай байдаг.</li>
           <li>Атрибутууд нь элементийн талаар нэмэлт мэдээлэл өгдөг.</li>
           <li>Атрибутууд нь үргэлж эхлэх tag-т бичигддэг.</li>
-          <li>Атрибутууд нь name = "value" буюу нэр = "утга" гэсэн бичиглэлтэй байдаг</li>
+          <p>HTML-д холбоосыг &lt;<span className='text-red-400 bg-gray-700' dangerouslySetInnerHTML={{ __html: "a" }} />&gt; tag-д тодорхойлогддог. Холбоосыг <span className='text-pink-500'>href</span> атрибутад зааж өгнө.</p>
         </ul>
       </section>
       <section>
-      <h1 className="font-bold mt-8 text-2xl">href</h1>
-      <p>HTML-д холбоосыг &lt;<span className='text-red-400 bg-gray-700' dangerouslySetInnerHTML={{ __html: "a" }} />&gt; tag-д тодорхойлогддог. Холбоосыг <span className='text-pink-500'>href</span> атрибутад зааж өгнө.</p>
+        <h1 className="font-bold mt-8 text-2xl">href</h1>
+        <p>HTML-д холбоосыг &lt;<span className='text-red-400 bg-gray-700' dangerouslySetInnerHTML={{ __html: "a" }} />&gt; tag-д тодорхойлогддог. Холбоосыг <span className='text-pink-500'>href</span> атрибутад зааж өгнө.</p>
 
-      <h1 className="font-bold mt-8 text-2xl">жишээ код:</h1>
+        <h1 className="font-bold mt-8 text-2xl">жишээ код:</h1>
         <div style={{ cursor: 'move' }} className="mt-4">
-          
-        <iframe src="https://codesandbox.io/embed/naughty-rhodes-sqg0yl?fontsize=14&hidenavigation=1&theme=dark&editorsize=50"
-  style={{ width: '100%', height: '500px', border: '0', borderRadius: '4px', overflow: 'hidden' }}
-  title="naughty-rhodes-sqg0yl"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
 
-          
+          <iframe src="https://codesandbox.io/embed/naughty-rhodes-sqg0yl?fontsize=14&hidenavigation=1&theme=dark&editorsize=50"
+            style={{ width: '100%', height: '500px', border: '0', borderRadius: '4px', overflow: 'hidden' }}
+            title="naughty-rhodes-sqg0yl"
+            allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+            sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+          ></iframe>
         </div>
       </section>
       <section>

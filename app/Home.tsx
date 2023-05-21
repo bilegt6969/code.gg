@@ -47,7 +47,7 @@ function Home() {
           </div>
 
 <div className="items-center mb-[-6rem]">
-  <img className='w-[30rem] h-[30rem] items-center justify-center mx-auto ' src="https://ui.dev/images/illuminated.svg" alt="" />
+  <Image className='w-[30rem] h-[30rem] items-center justify-center mx-auto ' height={30} width={40} src={'https://ui.dev/images/illuminated.svg'} alt={'sb'}/>
   <div className="max-w-[30rem] items-center mx-auto justify-center"><h2 className="text-3xl font-bold text-[#f4f8df] mb-4 font-sans">Many kids have the ambition to learn coding, but often give up due to their lack of English proficiency.</h2>
     <p className="text-3xl font-bold text-[#f4f8df] font-sans mb-1">However, in this new era, we offer coding lessons taught in Mongolian for 6 different programming languages.</p></div>
     
