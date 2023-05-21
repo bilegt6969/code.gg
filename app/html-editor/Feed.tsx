@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { ExclamationCircleIcon } from '@heroicons/react/24/solid'
 
 
@@ -17,7 +18,7 @@ function Feed() {
       <section>
       <div className="mt-8">
     <h1 className='font-bold mt-4 text-3xl'>1-р алхам: Notepad нээх.</h1>
-    <img src="https://www.windows11news.com/wp-content/uploads/2021/10/notepad_icon.png" className='rounded-2xl mt-4 w-auto h-[20rem]' alt="" />
+    <Image src="https://www.windows11news.com/wp-content/uploads/2021/10/notepad_icon.png" className='rounded-2xl mt-4 w-auto h-[20rem]' alt="" width={150} height={150} />
     <h1 className='font-bold mt-8 text-3xl'>2-р алхам: код бичэх.</h1>
     <p>доорх кодыг хуулж аваад Notepad -дээр буулгаарай</p>
 </div>
@@ -33,7 +34,7 @@ function Feed() {
 
 <h1 className='font-bold mt-8 text-3xl'>3-р алхам: хадгалах.</h1>
 <p></p>
-<img src="https://www.w3schools.com/html/img_saveas.png" className='rounded-2xl w-auto mt-4' alt="" />
+<Image src="https://www.w3schools.com/html/img_saveas.png" className='rounded-2xl w-auto mt-4' alt="" width={150} height={150} />
 <h1 className='font-bold mt-8 text-3xl mb-4'>4-р алхам: хуудсыг үзэх.</h1>
 <iframe src="https://codesandbox.io/embed/charming-haze-vo1wwo?fontsize=14&hidenavigation=1&theme=dark&editorsize=0"
   style={{ width: '100%', height: '500px', border: '0', borderRadius: '4px', overflow: 'hidden' }}
