@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Popover } from '@headlessui/react';
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 import { Fragment } from 'react'
+import Image from 'next/image';
 import { Menu, Transition } from '@headlessui/react'
 
 function classNames(...classes:any[]) {
@@ -14,9 +15,11 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='sticky top-0 z-1000 bg-black border border-white border-t-0 border-x-0 p-7'>
+    <div className='sticky top-0 z-1000 bg-black border border-white border-t-0 border-x-0 p-5'>
       <div className="flex flex-row items-center justify-between mx-auto max-w-7xl">
-        <a href="/">        <img src="https://see.fontimg.com/api/renderfont4/6m4o/eyJyIjoiZnMiLCJoIjo3MSwidyI6MTAwMCwiZnMiOjcxLCJmZ2MiOiIjRkZGRkZGIiwiYmdjIjoiI0EyMEQwRCIsInQiOjF9/Q09ERS5nZw/atlantia-expanded-italic.png" alt="" className="w-auto h-[1.5rem]" />
+        <a href="/"> <Image src='https://see.fontimg.com/api/renderfont4/6m4o/eyJyIjoiZnMiLCJoIjo3MSwidyI6MTAwMCwiZnMiOjcxLCJmZ2MiOiIjRkZGRkZGIiwiYmdjIjoiI0EyMEQwRCIsInQiOjF9/Q09ERS5nZw/atlantia-expanded-italic.png'     width={300} height={300}
+ alt={'logo'}       />
+        
 </a>
         <a href="/">нүүр</a>
         <a href="">Бидний тухай</a>

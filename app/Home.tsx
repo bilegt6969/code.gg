@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-
+import Image from 'next/image';
 
 function Home() {
   return (
@@ -8,7 +8,7 @@ function Home() {
       <header className="text-center mt-[18rem]">
         
         
-      <img src="https://see.fontimg.com/api/renderfont4/6m4o/eyJyIjoiZnMiLCJoIjo3MSwidyI6MTAwMCwiZnMiOjcxLCJmZ2MiOiIjRkZGRkZGIiwiYmdjIjoiI0EyMEQwRCIsInQiOjF9/Q09ERS5nZw/atlantia-expanded-italic.png" alt="" className="mb-[3rem]" />
+      <Image className="mb-[3rem]" src='https://see.fontimg.com/api/renderfont4/6m4o/eyJyIjoiZnMiLCJoIjo3MSwidyI6MTAwMCwiZnMiOjcxLCJmZ2MiOiIjRkZGRkZGIiwiYmdjIjoiI0EyMEQwRCIsInQiOjF9/Q09ERS5nZw/atlantia-expanded-italic.png' width={800} height={800} alt={'logo'}/>
         <h2 className="text-2xl font-mono mb-4">Learn without no limit</h2>
         
         </header>       
