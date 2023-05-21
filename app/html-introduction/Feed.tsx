@@ -26,7 +26,7 @@ function Feed() {
         </div>
         <ul className="list-disc mt-8">
           <li><span className='text-green-400'>&lt;!DOCTYPE html&gt;</span> HTML5-ийг тунхаглан зарлаж байна.</li>
-          <li><span className='text-green-400'>&lt;html lang="en"&gt;</span> элемент нь HTML хуудас эхэлснийг илэрхийлнэ.</li>
+          <li><span className='text-green-400'>&lt;html lang=&quot;en&ldquo;&gt;</span> элемент нь HTML хуудас эхэлснийг илэрхийлнэ.</li>
           <li><span className='text-green-400'>&lt;head&gt;</span> элемент нь мета мэдээллийг агуулна.</li>
           <li><span className='text-green-400'>&lt;title&gt;</span> элементэд гарчгийг зааж өгнө.</li>
           <li><span className='text-green-400'>&lt;body&gt;</span> элемент нь дэлгэцэд харагдах хуудасны агуулгыг агуулна.</li>

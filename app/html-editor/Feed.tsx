@@ -9,8 +9,8 @@ function Feed() {
       <section>
       <h1 className="font-bold text-4xl mt-8">HTML Editor</h1>
         <ul className="list-disc mt-4">
-          <li>Хамгийн энгийн editor нь windows үйлдэлийн системийн "Notepad" юм.</li>
-          <li>"Notepad" Бичсэн HTML файлаа firstHtml гэсэн нэртэй хадгалаад ажилуулж үзье.</li>
+          <li>Хамгийн энгийн editor нь windows үйлдэлийн системийн &quot;Notepad&ldquo; юм.</li>
+          <li>&quot;Notepad&ldquo; Бичсэн HTML файлаа firstHtml гэсэн нэртэй хадгалаад ажилуулж үзье.</li>
           <li>Notepad дээр нэрийг өгхөд анхны утга нь index.txt байх бөгөөд үүнийг бид index.html гэж хадгална.</li>
           <li>Хадгалсан файл дээрээ 2 дархад таны интернет хөтөч нээгдэж таны бичсэн код ажиллах болно.</li>
         </ul>
