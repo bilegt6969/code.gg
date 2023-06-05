@@ -95,7 +95,7 @@ function Feed() {
 <section>
 <h1 className="font-bold text-2xl mt-8 mb-4">Хүрээний өнгө</h1>
 <p className='mt-4 mb-4'>HTML-д өнгө нь RGB, HEX, HSL, RGBA болон HSLA -н эдгээрийн утгыг ашигладаг.</p>
-<p>Жишээ нь "slateblue" өнгний хувьд авч үзвэл:</p>
+<p>Жишээ нь &quot;slateblue&quot; өнгний хувьд авч үзвэл:</p>
 <div className=" space-y-3">
   <p className='bg-[#6a5acd] p-4'>rgb(106, 90, 205)</p>
   <p className='bg-[#6a5acd] p-4'>#6a5acd</p>
