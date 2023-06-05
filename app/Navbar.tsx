@@ -1,139 +1,132 @@
-import React from 'react';
 import { useState } from 'react';
-import { Popover } from '@headlessui/react';
-import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/24/solid';
-import { Fragment } from 'react'
+import { motion } from 'framer-motion';
+import { Bars2Icon, XMarkIcon, ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+import Logo from '../img/logo.svg'
+import { Fragment } from 'react';
+import { Popover, Transition } from '@headlessui/react';
 import Image from 'next/image';
-import { Menu, Transition } from '@headlessui/react'
 
-function classNames(...classes:any[]) {
-  return classes.filter(Boolean).join(' ')
-}
-
-
-function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false); // Add state for submenu
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const toggleSubmenu = () => { // Add toggleSubmenu function
+    setIsSubmenuOpen(!isSubmenuOpen);
+  };
+
+  const menuIconVariants = {
+    closed: { rotate: 0 },
+    open: { rotate: 45 },
+  };
+
+  const xIconVariants = {
+    closed: { rotate: -45 },
+    open: { rotate: 0 },
+  };
 
   return (
-    <div className='sticky top-0 z-1000 bg-black border border-white border-t-0 border-x-0 p-5'>
-      <div className="flex flex-row items-center justify-between mx-auto max-w-7xl">
-        <a href="/"> <Image src='https://see.fontimg.com/api/renderfont4/6m4o/eyJyIjoiZnMiLCJoIjo3MSwidyI6MTAwMCwiZnMiOjcxLCJmZ2MiOiIjRkZGRkZGIiwiYmdjIjoiI0EyMEQwRCIsInQiOjF9/Q09ERS5nZw/atlantia-expanded-italic.png'     width={300} height={300}
- alt={'logo'}       />
-        
-</a>
-        <a href="/">нүүр</a>
-        <a href="">Бидний тухай</a>
-        <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm  ">
-        хичээлүүд
-          <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
-        </Menu.Button>
-      </div>
-
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-black shadow-lg ring-1 ring-white ring-opacity-3 focus:outline-none">
-          <div className="py-1">
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="/html-introduction"
-                  className={classNames(
-                    active ? 'bg-[#1f1f1f] ' : 'text-white',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  HTML
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-[#1f1f1f] ' : 'text-white',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  CSS
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-[#1f1f1f] ' : 'text-white',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  JavaScript
-                </a>
-              )}
-            </Menu.Item>
-            <form method="POST" action="#">
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    type="submit"
-                    className={classNames(
-                      active ? 'bg-[#1f1f1f] ' : 'text-white',
-                      'block w-full px-4 py-2 text-left text-sm'
-                    )}
-                  >
-                    c++
-                  </button>
-                )}
-              </Menu.Item>
-            </form>
-            <form method="POST" action="#">
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    type="submit"
-                    className={classNames(
-                      active ? 'bg-[#1f1f1f] ' : 'text-white',
-                      'block w-full px-4 py-2 text-left text-sm'
-                    )}
-                  >
-                    c++
-                  </button>
-                )}
-              </Menu.Item>
-            </form>
+    <div className="outline p-1 outline-[#454444] outline-1 backdrop-blur-sm bg-black/90 sticky top-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Fragment>
+              <Image src={Logo} alt="Logo" className="w-[130px] h-auto" />
+            </Fragment>
           </div>
-        </Menu.Items>
-      </Transition>
-    </Menu>
-    <a href="">Холбоо барих</a>
+          <div className="hidden sm:ml-6 sm:hidden lg:flex sm:items-center">
+            <div className="flex items-center space-x-4">
+              <a href="#" className="text-gray-200  hover:text-gray-400 transition  px-3 py-2 rounded-md text-sm font-medium">Нүүр</a>
+              <a href="#" className="text-gray-200  hover:text-gray-400 transition whitespace-nowrap  px-3 py-2 rounded-md text-sm font-medium">Бидний тухай</a>
+              <Popover>
+                {({ open }) => (
+                  <>
+                    <Popover.Button className="flex items-center space-x-1 px-3 py-2 rounded-md focus:outline-none">
+                      <span className='text-sm font-medium'>Хичээлүүд</span>
+                      <ChevronDownIcon className="w-4 h-4" />
+                    </Popover.Button>
 
-      
-
-        <Popover>
-          <Popover.Button>
-            <MagnifyingGlassIcon className='w-auto h-8 cursor-pointer' onClick={() => setIsOpen(!isOpen)} />
-          </Popover.Button>
-          <Popover.Panel
-            className='absolute z-10 w-72 max-w-xs p-4 mt-2 transform -translate-x-1/2 left-1/2 bg-white rounded-md shadow-lg'
-            style={{ display: isOpen ? 'block' : 'none' }}
-          >
-            <input type='text' placeholder='Search' className='w-full py-2 px-3 border border-gray-300 rounded-md' />
-          </Popover.Panel>
-        </Popover>
+                    <Transition
+                      show={open}
+                      enter="transition duration-100 ease-out"
+                      enterFrom="opacity-0 scale-95"
+                      enterTo="opacity-100 scale-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="opacity-100 scale-100"
+                      leaveTo="opacity-0 scale-95"
+                    >
+                      <Popover.Panel className="absolute z-10 w-48 p-2 mt-2 bg-white rounded-md shadow-lg outline outline-black ring-offset-1 outline-1">
+                        <div className="flex flex-col space-y-2">
+                          <a href="/html-introduction" className="block px-4 py-2 text-sm text-gray-700 font-medium hover:bg-yellow-500 rounded-md">Html</a>
+                          <a href="#" className="block px-4 py-2 text-sm text-gray-700 font-medium hover:bg-yellow-500 rounded-md">Css</a>
+                          <a href="#" className="block px-4 py-2 text-sm text-gray-700 font-medium hover:bg-yellow-500 rounded-md">JavaScript</a>
+                          <a href="#" className="block px-4 py-2 text-sm text-gray-700 font-medium hover:bg-yellow-500 rounded-md">Python</a>
+                          <a href="#" className="block px-4 py-2 text-sm text-gray-700 font-medium hover:bg-yellow-500 rounded-md">C++</a>
+                          <a href="#" className="block px-4 py-2 text-sm text-gray-700 font-medium hover:bg-yellow-500 rounded-md">C#</a>
+                        </div>
+                      </Popover.Panel>
+                    </Transition>
+                  </>
+                )}
+              </Popover>
+              <a href="#" className="text-gray-200  hover:text-gray-400 transition  px-3 py-2 whitespace-nowrap  rounded-md text-sm font-medium">Холбоо барих</a>
+            </div>
+          </div>
+          <div className=" items-center hidden sm:ml-6 sm:hidden lg:flex sm:items-center">
+            <button className='bg-white px-5 py-3 text-black text-sm font-medium rounded-xl hover:bg-yellow-400 whitespace-nowrap transition'>Яг одоо эхлэх</button>
+          </div>
+          <div className="-mr-2 flex items-center sm:flex md:flex lg:hidden">
+            <button onClick={toggleNavbar} type="button" className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+              <span className="sr-only">Open main menu</span>
+              <motion.span
+                className="h-6 w-6 z-50"
+                variants={isOpen ? xIconVariants : menuIconVariants}
+                animate={isOpen ? 'open' : 'closed'}
+              >
+                {isOpen ? (
+                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                ) : (
+                  <Bars2Icon className="h-6 w-6" aria-hidden="true" />
+                )}
+              </motion.span>
+            </button>
+          </div>
+        </div>
       </div>
+      <motion.div
+        initial={{ height: 0 }}
+        animate={{ height: isOpen ? '100vh' : 0 }}
+        transition={{ duration: 0 }}
+        className={`${isOpen ? 'block' : 'hidden'} sm:flex md:flex lg:flex fixed top-0 left-0 w-full bg-black shadow-lg`}
+      >
+        {isOpen && (
+          <div className="px-2 pt-[10rem] pb-3 space-y-1">
+            <a href="#" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-3xl font-medium">Нүүр</a>
+            <a href="#" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-3xl font-medium">Бидний тухай</a>
+            <div className="flex items-center" onClick={toggleSubmenu}>
+              <a href="#" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-3xl font-medium">Хичээлүүд</a>
+              <ChevronRightIcon className="w-8 h-8" />
+            </div>
+            {isSubmenuOpen && ( // Add conditional check for submenu open
+              <div className="pl-6">
+                <a href="/html-introduction" className="block px-4 py-2 text-2xl text-white font-medium hover:bg-yellow-500 rounded-md">Html</a>
+                <a href="#" className="block px-4 py-2 text-2xl text-white font-medium hover:bg-yellow-500 rounded-md">Css</a>
+                <a href="#" className="block px-4 py-2 text-2xl text-white font-medium hover:bg-yellow-500 rounded-md">JavaScript</a>
+                <a href="#" className="block px-4 py-2 text-2xl text-white font-medium hover:bg-yellow-500 rounded-md">Python</a>
+                <a href="#" className="block px-4 py-2 text-2xl text-white font-medium hover:bg-yellow-500 rounded-md">C++</a>
+                <a href="#" className="block px-4 py-2 text-2xl text-white font-medium hover:bg-yellow-500 rounded-md">C#</a>
+              </div>
+            )}
+            <a href="#" className="text-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-3xl font-medium">Холбоо барих</a>
+            {/* Add more navigation links as needed */}
+          </div>
+        )}
+      </motion.div>
     </div>
   );
-}
+};
 
 export default Navbar;
-  

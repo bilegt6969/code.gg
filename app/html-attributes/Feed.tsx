@@ -61,7 +61,7 @@ function Feed() {
       </section>
       <section>
       <h1 className="font-bold mt-8 mb-4 text-2xl">alt</h1>
-      <p className='mb-4'><span className='text-pink-500'>&lt;alt&gt;</span> атрибутад зургийг харуулах боломжгүй үед оронд нь гарч ирэх тайлбар текcтыг зааж өгнө.</p>
+      <p className='mb-4'><span className='text-pink-500'>&lt;head&gt;</span> атрибутад зургийг харуулах боломжгүй үед оронд нь гарч ирэх тайлбар текcтыг зааж өгнө.</p>
       <iframe src="https://codesandbox.io/embed/fervent-mopsa-5e5961?fontsize=14&hidenavigation=1&theme=dark&editorsize=50"
   style={{ width: '100%', height: '500px', border: '0', borderRadius: '4px', overflow: 'hidden' }}
   title="fervent-mopsa-5e5961"

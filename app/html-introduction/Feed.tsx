@@ -38,7 +38,7 @@ function Feed() {
       <section>
       <div className="mt-8">
           <h1 className="font-bold text-4xl mb-4  ">HTML -ийн хувилбар</h1>
-          <table className=" w-[46rem] border border-gray-500">
+          <table className=" lg:w-[46rem] md:w-[20rem] sm:w-[10rem] h-auto border border-gray-500">
             <thead>
               <tr className='border w-[4rem]'>
                 <th className="px-4 py-2">HTML Version</th>

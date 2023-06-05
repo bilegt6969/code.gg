@@ -9,7 +9,7 @@ const roboto = Roboto({
 
 function Dashbar() {
 return (
-  <div className="min-w-[15rem] col-span-1 mt-8">
+  <div className=" col-span-1 mt-8">
   <div className={roboto.className}>
     <h1 className="text-lg font-bold mb-4 text-white">HTML tutorial</h1>
     <div className="pl-4 text-[#9ba1a6] cursor-pointer flex flex-col space-y-3">
@@ -22,27 +22,27 @@ return (
       <a href='../html-paragraph' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Paragraph</a>
       <a href='../html-style' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Style</a>
       <a href='../html-text' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Text Formatting </a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Quotation </a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Comments</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Colors</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML CSS</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML anks</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Images</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Tables</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Block</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Class</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML id</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Iframe</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML JavaScript</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML File Paths</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Head</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Layout</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Responsive</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Semantic</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Forms</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML form </a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Input Type</a>
-      <a className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Submit Button</a>
+      <a href='../html-quotation' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Quotation </a>
+      <a href='../html-comments' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Comments</a>
+      <a href='../html-colors' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Colors</a>
+      <a href='../html-'className="hover:text-gray-100 transition duration-100 ease-in-out">HTML CSS</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML anks</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Images</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Tables</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Block</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Class</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML id</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Iframe</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML JavaScript</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML File Paths</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Head</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Layout</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Responsive</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Semantic</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Forms</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML form </a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Input Type</a>
+      <a href='../html-' className="hover:text-gray-100 transition duration-100 ease-in-out">HTML Submit Button</a>
     </div>
     
   </div>
