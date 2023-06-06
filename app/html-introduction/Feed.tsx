@@ -2,8 +2,8 @@ import React from 'react';
 
 function Feed() {
   return (
-    <div className="col-span-4">
-      <section>
+    <div className="lg:col-span-4 md:col-span-4 sm:col-span-5 col-span-5 lg:p-1 md:p-2 sm:p-4 p-4">
+      <section className=''>
       <h1 className="font-bold text-4xl mt-8">HTML Оршил</h1>
         <ul className="list-disc mt-4">
           <li>HTML гэдэг нь Hyper Text Markup Language гэсэн үгний товчлол бөгөөд вэб хуудасны стандарт тэмдэглэгээний хэл юм.</li>

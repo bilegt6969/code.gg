@@ -7,6 +7,33 @@ import { Popover, Transition } from '@headlessui/react';
 import Image from 'next/image';
 
 const Navbar = () => {
+  const [isOpen1, setIsOpen1] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen1(!isOpen1);
+  };
+
+  const sidebarVariants = {
+    hidden: {
+      y: '-100%',
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        type: 'spring',
+        damping: 25,
+        stiffness: 500,
+      },
+    },
+  };
+
+  const overlayVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false); // Add state for submenu
 
@@ -29,9 +56,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="outline p-1 outline-[#454444] outline-1 backdrop-blur-sm bg-black/90 sticky top-0">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+    <div className=" border-b border-[#454444]  sticky top-0">
+      <div className="backdrop-blur-sm bg-black/90">
+      <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 border-b border-[#454444]">
+        <div className="flex  justify-between h-16">
           <div className="flex items-center">
             <Fragment>
               <Image src={Logo} alt="Logo" className="w-[130px] h-auto" />
@@ -78,7 +106,7 @@ const Navbar = () => {
           <div className=" items-center hidden sm:ml-6 sm:hidden lg:flex sm:items-center">
             <button className='bg-white px-5 py-3 text-black text-sm font-medium rounded-xl hover:bg-yellow-400 whitespace-nowrap transition'>Яг одоо эхлэх</button>
           </div>
-          <div className="-mr-2 flex items-center sm:flex md:flex lg:hidden">
+          <div className="-mr-2  flex items-center sm:flex md:flex lg:hidden">
             <button onClick={toggleNavbar} type="button" className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
               <span className="sr-only">Open main menu</span>
               <motion.span
@@ -100,7 +128,7 @@ const Navbar = () => {
         initial={{ height: 0 }}
         animate={{ height: isOpen ? '100vh' : 0 }}
         transition={{ duration: 0 }}
-        className={`${isOpen ? 'block' : 'hidden'} sm:flex md:flex lg:flex fixed top-0 left-0 w-full bg-black shadow-lg`}
+        className={`${isOpen ? 'block' : 'hidden'} sm:flex md:flex lg:flex fixed top-0 left-0 w-full z-[10] bg-black shadow-lg`}
       >
         {isOpen && (
           <div className="px-2 pt-[10rem] pb-3 space-y-1">
@@ -125,6 +153,226 @@ const Navbar = () => {
           </div>
         )}
       </motion.div>
+      </div>
+
+      {/*Bottom */}
+      <div className="md:hidden">
+      <div className="relative">
+      <div className="backdrop-blur-sm backdrop-saturate-200 bg-black/40">
+        <button
+          onClick={toggleMenu}
+          type="button"
+          className="p-2 text-white z-50 hover:text-white focus:outline-none"
+        >
+          {isOpen1 ? (
+            <div className='flex items-center gap-1'>
+            <ChevronDownIcon className="h-3 w-3" aria-hidden="true" />
+            <span>Menu</span>
+            </div>          ) : (
+            <div className='flex items-center gap-1'>
+            <ChevronRightIcon className="h-3 w-3" aria-hidden="true" />
+            <span>Menu</span>
+
+            </div>
+          )}
+        </button>
+      </div>
+
+      {isOpen1 && (
+        <div className=" top-0 left-0 w-screen h-screen bg-gray-900 bg-opacity-50 backdrop-blur-md z-10">
+          <div className="p-4 text-gray-100">
+            <a
+              href="#"
+              className="block text-lg font-medium mb-4 hover:underline"
+            >
+              Menu Item 1
+            </a>
+            <a
+              href="#"
+              className="block text-lg font-medium mb-4 hover:underline"
+            >
+              Menu Item 2
+            </a>
+            <a
+              href="#"
+              className="block text-lg font-medium mb-4 hover:underline"
+            >
+              Menu Item 3
+            </a>
+            <a
+                href="../html-basic"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Үндсэн ойлголт
+              </a>
+              <a
+                href="../html-element"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Element
+              </a>
+              <a
+                href="../html-attributes"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Attributes
+              </a>
+              <a
+                href="../html-headings"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Headings
+              </a>
+              <a
+                href="../html-paragraph"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Paragraph
+              </a>
+              <a
+                href="../html-style"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Style
+              </a>
+              <a
+                href="../html-text"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Text Formatting
+              </a>
+              <a
+                href="../html-quotation"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Quotation
+              </a>
+              <a
+                href="../html-comments"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Comments
+              </a>
+              <a
+                href="../html-colors"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Colors
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML CSS
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML anks
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Images
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Tables
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Block
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Class
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML id
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Iframe
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML JavaScript
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML File Paths
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Head
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Layout
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Responsive
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Semantic
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Forms
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML form
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Input Type
+              </a>
+              <a
+                href="../html-"
+              className="block text-lg font-medium mb-4 hover:underline"
+              >
+                HTML Submit Button
+              </a>          </div>
+        </div>
+      )}
+    </div>
+         </div>
+
+      
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 
 function Feed() {
   return (
-    <div className="col-span-4 mb-[3rem]">
+    <div className=" mb-[3rem] lg:col-span-4 md:col-span-4 sm:col-span-5 col-span-5  lg:p-1 md:p-2 sm:p-4 p-4 ">
       <section>
       <h1 className="font-bold text-4xl mt-8">HTML текст формат</h1>
       <p className='mt-4'>HTML-д тусгай утгатай текстүүдийг тодорхойлдог элементүүд байдаг. Үүнд:</p>

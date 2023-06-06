@@ -9,7 +9,7 @@ const roboto = Roboto({
 
 function Dashbar() {
 return (
-  <div className=" col-span-1 mt-8">
+  <div className=" col-span-1 mt-8 hidden sm:hidden md:flex lg:flex ">
   <div className={roboto.className}>
     <h1 className="text-lg font-bold mb-4 text-white">HTML tutorial</h1>
     <div className="pl-4 text-[#9ba1a6] cursor-pointer flex flex-col space-y-3">

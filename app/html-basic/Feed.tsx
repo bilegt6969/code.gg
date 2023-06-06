@@ -2,7 +2,7 @@ import React from 'react';
 
 function Feed() {
   return (
-    <div className="col-span-4 mb-[3rem]">
+    <div className="col-span-5 mb-[3rem] lg:col-span-4 md:col-span-4 sm:col-span-5 lg:p-1 md:p-2 sm:p-4 p-4 ">
       <section>
       <h1 className="font-bold text-4xl mt-8">HTML Үндсэн ойлголт</h1>
     <p>Энэ хичээлээр бид үндсэн HTML кодыг авч үзэх болно.
